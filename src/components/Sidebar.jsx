@@ -143,53 +143,59 @@ export default function Sidebar() {
           </span>
         </div>
 
-        {/* Contact Info */}
-        <div
-          className="font-sans max-w-md mx-auto space-y-6 border-b border-gray-500 pb-8 pt-2"
-          data-aos="fade-right"
-          data-aos-duration="900"
-          data-aos-easing="ease-out-cubic"
-          data-aos-delay="550"
-        >
-          {/* Email */}
-          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-            <FiMail className="text-[#4BB8FF] text-4xl drop-shadow-lg" />
-            <div className="flex flex-col items-start">
-              <h1 className="text-[#2C2C2C] font-semibold text-lg">Email</h1>
-              <a
-                href="mailto:niloyahmadramjan@gmail.com"
-                target="_blank"
-                className="text-[#1F2937] text-md hover:underline"
-              >
-                niloyahmadramjan@..
-              </a>
+        <div className=''>
+          {/* Contact Info */}
+          <div
+            className="font-sans md:max-w-md md:mx-auto space-y-6 border-b border-gray-500 pb-8 pt-2"
+            data-aos="fade-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-cubic"
+            data-aos-delay="550"
+          >
+            {/* Email */}
+            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+              <FiMail className="text-[#4BB8FF] text-4xl drop-shadow-lg" />
+              <div className="flex flex-col items-start">
+                <h1 className="text-[#2C2C2C] font-semibold text-lg">Email</h1>
+                <a
+                  href="mailto:niloyahmadramjan@gmail.com"
+                  target="_blank"
+                  className="text-[#1F2937] text-md hover:underline"
+                >
+                  niloyahmadramjan@..
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* WhatsApp / Phone */}
-          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-            <FiPhone className="text-[#25D366] text-4xl drop-shadow-lg" />
-            <div className="flex flex-col items-start">
-              <h1 className="text-[#2C2C2C] font-semibold text-lg">WhatsApp</h1>
-              <a
-                href="https://wa.me/8801774001235"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1F2937] text-md hover:underline"
-              >
-                +8801774001235
-              </a>
+            {/* WhatsApp / Phone */}
+            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+              <FiPhone className="text-[#25D366] text-4xl drop-shadow-lg" />
+              <div className="flex flex-col items-start">
+                <h1 className="text-[#2C2C2C] font-semibold text-lg">
+                  WhatsApp
+                </h1>
+                <a
+                  href="https://wa.me/8801774001235"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1F2937] text-md hover:underline"
+                >
+                  +8801774001235
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* Address */}
-          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-            <FiMapPin className="text-[#FF6B6B] text-4xl drop-shadow-lg" />
-            <div className="flex flex-col items-start">
-              <h1 className="text-[#2C2C2C] font-semibold text-lg">Address</h1>
-              <p className="text-[#1F2937] text-md select-text">
-                Dhaka, Bangladesh
-              </p>
+            {/* Address */}
+            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+              <FiMapPin className="text-[#FF6B6B] text-4xl drop-shadow-lg" />
+              <div className="flex flex-col items-start">
+                <h1 className="text-[#2C2C2C] font-semibold text-lg">
+                  Address
+                </h1>
+                <p className="text-[#1F2937] text-md select-text">
+                  Dhaka, Bangladesh
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto relative">
+    <div className="min-h-screen max-w-7xl mx-auto py-10 relative">
       <div className="lg:flex">
         {/* Sidebar */}
         <aside
@@ -95,7 +95,6 @@ export default function MainLayout() {
               Awards
             </NavLink>
             <NavLink
-              to="/blog"
               end
               className={({ isActive }) =>
                 `transition-colors duration-300 text-sm ${
@@ -103,7 +102,7 @@ export default function MainLayout() {
                 }`
               }
             >
-              Blog
+              Download CV
             </NavLink>
           </nav>
 
@@ -184,17 +183,13 @@ export default function MainLayout() {
               >
                 Awards
               </NavLink>
-              <NavLink
-                to="/blog"
-                end
-                className={({ isActive }) =>
-                  `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
-                  }`
-                }
+              <a
+                href="/cv.pdf" 
+                download="My_CV.pdf" 
+                className="transition-colors duration-300 cursor-pointer text-gray-100 hover:text-[#FF4E88] shadow-lg "
               >
-                Blog
-              </NavLink>
+                Download CV
+              </a>
             </nav>
 
             {/* Scrollable Outlet Content */}
