@@ -2,6 +2,8 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router'
 import MainLayout from '../Layout/MainLayout'
 import AboutMe from '../pages/About'
+import Resume from '../pages/Resume'
+import Projects from '../pages/Projects'
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +13,16 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <AboutMe/>
-      }
+      },
+      {
+        path: "/resume",
+        element: <Resume/>
+      },
+      {
+        path: "/projects",
+        element: <Projects/>
+      },
+
     ]
   },
 ])

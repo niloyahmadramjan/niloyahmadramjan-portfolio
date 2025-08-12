@@ -139,7 +139,7 @@ export default function Sidebar() {
           </span>
           <span className="flex items-center gap-2 bg-[#2C2C2C]/30 text-white px-4 py-1 rounded-lg text-sm">
             <span className="w-2 h-2 rounded-full bg-[#FFB74B]" />
-            MERN + Frontend Hybrid
+            Frontend Developer
           </span>
         </div>
 
@@ -197,18 +197,18 @@ export default function Sidebar() {
         {/* Social Links */}
         <div className="flex items-center justify-center gap-4 mt-10">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/niloyahmedramjan/"
             className="text-[#4BB8FF] hover:text-[#1E40AF] transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={50} />
+            <FaLinkedin size={40} />
           </a>
           <a
-            href="#"
+            href="https://github.com/niloyahmadramjan"
             className="text-[#4BB8FF] hover:text-[#1E40AF] transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={50} />
+            <FaGithub size={40} />
           </a>
         </div>
       </div>

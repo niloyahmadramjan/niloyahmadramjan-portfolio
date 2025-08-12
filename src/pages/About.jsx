@@ -11,7 +11,7 @@ const AboutMe = () => {
   return (
     <section className=" px-4 md:px-12 lg:px-20" id="about">
       <div
-        className="max-w-6xl mx-auto p-8 rounded-t-xl"
+        className="max-w-6xl mx-auto rounded-t-xl"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
