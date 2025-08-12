@@ -94,16 +94,13 @@ export default function MainLayout() {
             >
               Awards
             </NavLink>
-            <NavLink
-              end
-              className={({ isActive }) =>
-                `transition-colors duration-300 text-sm ${
-                  isActive ? 'text-[#FF4E88]' : 'hover:text-[#FF4E88]'
-                }`
-              }
+            <a
+              href="/cv.pdf"
+              download="My_CV.pdf"
+              className="transition-colors duration-300 cursor-pointer text-gray-100 hover:text-[#FF4E88] shadow-lg "
             >
               Download CV
-            </NavLink>
+            </a>
           </nav>
 
           {/* Scrollable Main Content Container */}
@@ -184,8 +181,8 @@ export default function MainLayout() {
                 Awards
               </NavLink>
               <a
-                href="/cv.pdf" 
-                download="My_CV.pdf" 
+                href="/cv.pdf"
+                download="My_CV.pdf"
                 className="transition-colors duration-300 cursor-pointer text-gray-100 hover:text-[#FF4E88] shadow-lg "
               >
                 Download CV
