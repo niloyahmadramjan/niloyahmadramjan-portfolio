@@ -77,7 +77,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="mb-12 px-8" data-aos="fade-up" data-aos-delay="100">
+    <div className=" px-8 pb-8 " data-aos="fade-up" data-aos-delay="100">
       <h3 className="text-2xl font-semibold text-white mb-6">Projects</h3>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (

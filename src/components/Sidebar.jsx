@@ -38,97 +38,65 @@ export default function Sidebar() {
 
   return (
     <div
-      className="w-full h-fit lg:fixed lg:w-96 md:p-6 p-4 rounded-[2.5rem] shadow-2xl overflow-hidden backdrop-blur-xl relative"
+      className="w-full lg:fixed lg:w-96 md:p-6 p-4 rounded-[2.5rem] shadow-2xl overflow-hidden backdrop-blur-xl relative"
       style={{
         background: 'rgba(255, 255, 255, 0.15)',
         border: '1px solid rgba(255, 255, 255, 0.25)',
       }}
       data-aos="fade-down"
-      data-aos-duration="1200"
-      data-aos-easing="ease-out-cubic"
     >
       {/* Profile Image + Name */}
-      <div
-        className="flex lg:block justify-around items-center"
-        data-aos="fade-right"
-        data-aos-duration="1100"
-        data-aos-easing="ease-out-cubic"
-      >
-        <div
-          data-aos="zoom-in-down"
-          data-aos-duration="1000"
-          data-aos-delay="100"
-          data-aos-easing="ease-out-cubic"
-        >
+      <div className="flex lg:block justify-around items-center">
+        <div>
           <img
             src="https://i.ibb.co/Mx1TGHq6/backbgprofile-1-optimized-500.png"
             alt="Niloy Ahmad Ramjan"
-            className="w-28 h-28 md:w-42 md:h-42 mx-auto rounded-full object-cover mb-4 border-4 border-[#4BB8FF] shadow-lg"
+            className="w-24 h-24 sm:w-28 sm:h-28 lg:w-40 lg:h-40 mx-auto rounded-full object-cover mb-4 border-4 border-[#4BB8FF] shadow-lg"
           />
         </div>
-
-        {/* Name */}
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1100"
-          data-aos-delay="250"
-          data-aos-easing="ease-out-cubic"
-        >
-          <h2 className="text-black text-xl md:text-2xl font-bold md:text-center">
+        <div className="text-center lg:mt-2">
+          <h2 className="text-black text-lg sm:text-xl lg:text-2xl font-bold">
             Niloy Ahmad Ramjan
           </h2>
-          <p className="text-[#2C2C2C] font-bold mt-1 md:text-center">
+          <p className="text-[#2C2C2C] font-semibold mt-1 text-sm sm:text-base">
             Full Stack MERN Developer
           </p>
         </div>
       </div>
 
-      {/* Toggle button only on mobile */}
+      {/* Toggle button on mobile */}
       {windowWidth < 1024 && (
-        <div
-          className="flex justify-center mt-6 absolute -top-4 right-5 cursor-pointer"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-easing="ease-out-cubic"
-          data-aos-delay="350"
-        >
+        <div className="flex justify-center mt-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center gap-2 text-[#FFFFFF] p-4 backdrop-blur-2xl rounded-full font-semibold text-lg focus:outline-none"
+            className="flex items-center gap-2 text-white px-5 py-3 rounded-full bg-black/40 hover:bg-black/50 transition"
             aria-expanded={isOpen}
-            aria-controls="extra-info"
           >
             {isOpen ? (
-              <FaChevronUp className="cursor-pointer" />
+              <>
+                <FaChevronUp /> Hide Info
+              </>
             ) : (
-              <FaChevronDown className="cursor-pointer" />
+              <>
+                <FaChevronDown /> Show Info
+              </>
             )}
           </button>
         </div>
       )}
 
-      {/* Full content: show always on desktop, toggle on mobile */}
+      {/* Content */}
       <div
-        id="extra-info"
         ref={contentRef}
         className="mt-6 space-y-6 overflow-hidden lg:block"
         style={{
           maxHeight: maxHeight,
           opacity: windowWidth >= 1024 || isOpen ? 1 : 0,
-          transition: 'max-height 0.5s ease, opacity 0.5s ease',
+          transition: 'max-height 0.4s ease, opacity 0.4s ease',
         }}
-        data-aos={windowWidth >= 1024 || isOpen ? 'fade-up' : ''}
-        data-aos-duration="1200"
-        data-aos-easing="ease-out-cubic"
       >
         {/* Roles */}
-        <div
-          className="flex flex-col gap-3 border-b border-gray-400 pb-6"
-          data-aos="fade-left"
-          data-aos-duration="900"
-          data-aos-easing="ease-out-cubic"
-          data-aos-delay="400"
-        >
+        <div className="flex flex-col gap-3 border-b border-gray-400 pb-6">
           <span className="flex items-center gap-2 bg-[#2C2C2C]/30 text-white px-4 py-1 rounded-lg text-sm">
             <FaReact className="text-[#61DBFB]" />
             Tech-Forward & Creative
@@ -143,78 +111,58 @@ export default function Sidebar() {
           </span>
         </div>
 
-        <div className=''>
-          {/* Contact Info */}
-          <div
-            className="font-sans md:max-w-md md:mx-auto space-y-6 border-b border-gray-500 pb-8 pt-2"
-            data-aos="fade-right"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-cubic"
-            data-aos-delay="550"
-          >
-            {/* Email */}
-            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-              <FiMail className="text-[#4BB8FF] text-4xl drop-shadow-lg" />
-              <div className="flex flex-col items-start">
-                <h1 className="text-[#2C2C2C] font-semibold text-lg">Email</h1>
-                <a
-                  href="mailto:niloyahmadramjan@gmail.com"
-                  target="_blank"
-                  className="text-[#1F2937] text-md hover:underline"
-                >
-                  niloyahmadramjan@..
-                </a>
-              </div>
+        {/* Contact */}
+        <div className="space-y-6 border-b border-gray-500 pb-8 pt-2">
+          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+            <FiMail className="text-[#4BB8FF] text-3xl" />
+            <div>
+              <h1 className="text-[#2C2C2C] font-semibold">Email</h1>
+              <a
+                href="mailto:niloyahmadramjan@gmail.com"
+                className="text-[#1F2937] hover:underline break-all"
+              >
+                niloyahmadramjan@gmail.com
+              </a>
             </div>
-
-            {/* WhatsApp / Phone */}
-            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-              <FiPhone className="text-[#25D366] text-4xl drop-shadow-lg" />
-              <div className="flex flex-col items-start">
-                <h1 className="text-[#2C2C2C] font-semibold text-lg">
-                  WhatsApp
-                </h1>
-                <a
-                  href="https://wa.me/8801774001235"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1F2937] text-md hover:underline"
-                >
-                  +8801774001235
-                </a>
-              </div>
+          </div>
+          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+            <FiPhone className="text-[#25D366] text-3xl" />
+            <div>
+              <h1 className="text-[#2C2C2C] font-semibold">WhatsApp</h1>
+              <a
+                href="https://wa.me/601135451398"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1F2937] hover:underline"
+              >
+                +601135451398
+              </a>
             </div>
-
-            {/* Address */}
-            <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
-              <FiMapPin className="text-[#FF6B6B] text-4xl drop-shadow-lg" />
-              <div className="flex flex-col items-start">
-                <h1 className="text-[#2C2C2C] font-semibold text-lg">
-                  Address
-                </h1>
-                <p className="text-[#1F2937] text-md select-text">
-                  Dhaka, Bangladesh
-                </p>
-              </div>
+          </div>
+          <div className="flex items-center gap-4 p-3 rounded-lg shadow-lg">
+            <FiMapPin className="text-[#FF6B6B] text-3xl" />
+            <div>
+              <h1 className="text-[#2C2C2C] font-semibold">Address</h1>
+              <p className="text-[#1F2937]">Dhaka, Bangladesh</p>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="flex items-center justify-center gap-4 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
           <a
             href="https://www.linkedin.com/in/niloyahmedramjan/"
             className="text-[#4BB8FF] hover:text-[#1E40AF] transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={40} />
+            <FaLinkedin size={36} />
           </a>
           <a
             href="https://github.com/niloyahmadramjan"
             className="text-[#4BB8FF] hover:text-[#1E40AF] transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={40} />
+            <FaGithub size={36} />
           </a>
         </div>
       </div>

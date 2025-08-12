@@ -29,7 +29,7 @@ import { TbBrandRedux } from 'react-icons/tb'
 
 const Resume = () => {
   return (
-    <section className="px-4 md:px-12 lg:px-20" id="resume">
+    <section className="px-4 md:px-12 lg:px-20" pb-8 id="resume">
       <div
         className="max-w-6xl mx-auto rounded-xl pb-8"
         data-aos="fade-up"

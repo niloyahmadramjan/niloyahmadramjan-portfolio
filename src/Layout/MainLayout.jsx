@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto py-10 relative">
+    <div className="min-h-screen max-w-7xl mx-auto pb-20 pt-5  md:pb-0 md:pt-0 relative">
       <div className="lg:flex">
         {/* Sidebar */}
         <aside
@@ -26,7 +26,7 @@ export default function MainLayout() {
         </aside>
 
         {/* Main content container with left margin for sidebar */}
-        <main className="flex-1 lg:ml-[100px] flex flex-col min-h-screen ">
+        <main className="flex-1 lg:ml-[100px] flex flex-col min-h-screen pb-10 lg:pb-0">
           {/* Mobile Navbar fixed bottom */}
           <nav
             className="
