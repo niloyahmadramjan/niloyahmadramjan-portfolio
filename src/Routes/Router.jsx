@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router'
 import MainLayout from '../Layout/MainLayout'
-import Home from '../pages/Home'
+import AboutMe from '../pages/About'
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home/>
+        element: <AboutMe/>
       }
     ]
   },

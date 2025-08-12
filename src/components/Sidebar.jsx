@@ -61,7 +61,7 @@ export default function Sidebar() {
           data-aos-easing="ease-out-cubic"
         >
           <img
-            src="https://i.ibb.co/bgTPqgJD/IMG-9196.jpg"
+            src="https://i.ibb.co/Mx1TGHq6/backbgprofile-1-optimized-500.png"
             alt="Niloy Ahmad Ramjan"
             className="w-28 h-28 md:w-42 md:h-42 mx-auto rounded-full object-cover mb-4 border-4 border-[#4BB8FF] shadow-lg"
           />
@@ -157,7 +157,8 @@ export default function Sidebar() {
             <div className="flex flex-col items-start">
               <h1 className="text-[#2C2C2C] font-semibold text-lg">Email</h1>
               <a
-                href="mailto:niloyahmadramjan@gmail.com" target='_blank'
+                href="mailto:niloyahmadramjan@gmail.com"
+                target="_blank"
                 className="text-[#1F2937] text-md hover:underline"
               >
                 niloyahmadramjan@..
@@ -211,7 +212,6 @@ export default function Sidebar() {
           </a>
         </div>
       </div>
-      
     </div>
   )
 }
