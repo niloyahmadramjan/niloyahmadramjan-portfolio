@@ -97,7 +97,7 @@ export default function MainLayout() {
             <a
               href="/cv.pdf"
               download="My_CV.pdf"
-              className="transition-colors duration-300 cursor-pointer text-gray-100 hover:text-[#FF4E88] shadow-lg "
+              className="transition-colors duration-300 cursor-pointer hover:text-[#FF4E88] shadow-lg "
             >
               Download CV
             </a>
