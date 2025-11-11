@@ -1,7 +1,14 @@
-import React from 'react'
-import { Outlet, NavLink } from 'react-router' // make sure it's 'react-router-dom'
-import Sidebar from '../components/Sidebar'
-import resume from '../assets/resume.pdf' 
+import React from "react";
+import { Outlet, NavLink } from "react-router"; // make sure it's 'react-router-dom'
+import Sidebar from "../components/Sidebar";
+import resume from "../assets/resume.pdf";
+import {
+  FaUser,
+  FaCode,
+  FaProjectDiagram,
+  FaAward,
+  FaFileDownload,
+} from "react-icons/fa";
 
 export default function MainLayout() {
   return (
@@ -31,76 +38,93 @@ export default function MainLayout() {
           {/* Mobile Navbar fixed bottom */}
           <nav
             className="
-              fixed bottom-0 left-0 w-full
-              flex justify-around items-center
-              border-t border-white/25
-              bg-white/15
-              backdrop-blur-md
-              rounded-tl-2xl rounded-tr-2xl
-              py-6
-              z-50
-              text-[#2C2C2C]
-              font-semibold
-              lg:hidden
-            "
+    fixed bottom-0 left-0 w-full
+    flex justify-between items-center
+    border-t border-white/25
+    bg-white/15
+    backdrop-blur-md
+    rounded-tl-2xl rounded-tr-2xl
+    py-3 px-4
+    z-50
+    text-[#2C2C2C]
+    font-semibold
+    lg:hidden
+  "
             style={{
-              borderTopLeftRadius: '1rem',
-              borderTopRightRadius: '1rem',
-              borderTop: '1px solid rgba(255, 255, 255, 0.25)',
-              background: 'rgba(255, 255, 255, 0.15)',
-              backdropFilter: 'blur(10px)',
+              borderTopLeftRadius: "1rem",
+              borderTopRightRadius: "1rem",
+              borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+              background: "rgba(255, 255, 255, 0.15)",
+              backdropFilter: "blur(10px)",
             }}
           >
             <NavLink
               to="/"
               end
               className={({ isActive }) =>
-                `transition-colors duration-300 text-sm ${
-                  isActive ? 'text-[#FF4E88]' : 'hover:text-[#FF4E88]'
+                `transition-colors duration-300 text-xs flex flex-col items-center ${
+                  isActive
+                    ? "text-[#FF4E88]"
+                    : "text-[#2C2C2C] hover:text-[#FF4E88]"
                 }`
               }
             >
-              About
+              <FaUser className="text-lg mb-1" />
+              <span>About</span>
             </NavLink>
+
             <NavLink
               to="/resume"
               end
               className={({ isActive }) =>
-                `transition-colors duration-300 text-sm ${
-                  isActive ? 'text-[#FF4E88]' : 'hover:text-[#FF4E88]'
+                `transition-colors duration-300 text-xs flex flex-col items-center ${
+                  isActive
+                    ? "text-[#FF4E88]"
+                    : "text-[#2C2C2C] hover:text-[#FF4E88]"
                 }`
               }
             >
-             Skills
+              <FaCode className="text-lg mb-1" />
+              <span>Skills</span>
             </NavLink>
+
             <NavLink
               to="/projects"
               end
               className={({ isActive }) =>
-                `transition-colors duration-300 text-sm ${
-                  isActive ? 'text-[#FF4E88]' : 'hover:text-[#FF4E88]'
+                `transition-colors duration-300 text-xs flex flex-col items-center ${
+                  isActive
+                    ? "text-[#FF4E88]"
+                    : "text-[#2C2C2C] hover:text-[#FF4E88]"
                 }`
               }
             >
-              Projects
+              <FaProjectDiagram className="text-lg mb-1" />
+              <span>Projects</span>
             </NavLink>
+
             <NavLink
               to="/awards"
               end
               className={({ isActive }) =>
-                `transition-colors duration-300 text-sm ${
-                  isActive ? 'text-[#FF4E88]' : 'hover:text-[#FF4E88]'
+                `transition-colors duration-300 text-xs flex flex-col items-center ${
+                  isActive
+                    ? "text-[#FF4E88]"
+                    : "text-[#2C2C2C] hover:text-[#FF4E88]"
                 }`
               }
             >
-           Awards & Certificates
+              <FaAward className="text-lg mb-1" />
+              <span>Certificates</span>
             </NavLink>
+
             <a
               href={resume}
-                download="mernstack-resume-ramjan.pdf"
-              className="transition-colors duration-300 cursor-pointer hover:text-[#FF4E88] shadow-lg "
+              download="mernstack-resume-ramjan.pdf"
+              className="transition-colors duration-300 cursor-pointer text-[#2C2C2C] hover:text-[#FF4E88] text-xs flex flex-col items-center"
             >
-              Download Resume
+              <FaFileDownload className="text-lg mb-1" />
+              <span>Resume</span>
             </a>
           </nav>
 
@@ -108,10 +132,10 @@ export default function MainLayout() {
           <div
             className="flex-1 rounded-[2.5rem] shadow-2xl backdrop-blur-xl relative flex flex-col"
             style={{
-              background: 'rgba(0, 0, 0, 0.4)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              marginTop: '1rem',
-              height: 'calc(100vh - 6rem)', // adjust height to avoid overflow
+              background: "rgba(0, 0, 0, 0.4)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              marginTop: "1rem",
+              height: "calc(100vh - 6rem)", // adjust height to avoid overflow
             }}
           >
             {/* Sticky Desktop Navbar */}
@@ -131,10 +155,10 @@ export default function MainLayout() {
                 self-start ml-auto
               "
               style={{
-                borderBottomLeftRadius: '1rem',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.03)',
-                background: 'rgba(255, 255, 255, 0.15)',
-                backdropFilter: 'blur(50px)',
+                borderBottomLeftRadius: "1rem",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.03)",
+                background: "rgba(255, 255, 255, 0.15)",
+                backdropFilter: "blur(50px)",
               }}
             >
               <NavLink
@@ -142,7 +166,7 @@ export default function MainLayout() {
                 end
                 className={({ isActive }) =>
                   `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                    isActive ? "text-[#FF4E88] shadow-lg" : "text-gray-100"
                   }`
                 }
               >
@@ -153,18 +177,18 @@ export default function MainLayout() {
                 end
                 className={({ isActive }) =>
                   `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                    isActive ? "text-[#FF4E88] shadow-lg" : "text-gray-100"
                   }`
                 }
               >
-Skills            
-  </NavLink>
+                Skills
+              </NavLink>
               <NavLink
                 to="/projects"
                 end
                 className={({ isActive }) =>
                   `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                    isActive ? "text-[#FF4E88] shadow-lg" : "text-gray-100"
                   }`
                 }
               >
@@ -175,22 +199,22 @@ Skills
                 end
                 className={({ isActive }) =>
                   `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                    isActive ? "text-[#FF4E88] shadow-lg" : "text-gray-100"
                   }`
                 }
               >
-               Awards & Certificates
+                Awards & Certificates
               </NavLink>
               <NavLink
                 to="/contact"
                 end
                 className={({ isActive }) =>
                   `transition-colors duration-300 cursor-pointer ${
-                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                    isActive ? "text-[#FF4E88] shadow-lg" : "text-gray-100"
                   }`
                 }
               >
-               Contact
+                Contact
               </NavLink>
               <a
                 href={resume}
@@ -205,7 +229,7 @@ Skills
             <div
               className="overflow-auto flex-1 mt-4"
               style={{
-                maxHeight: 'calc(100% - 60px)', // Leave space for navbar
+                maxHeight: "calc(100% - 60px)", // Leave space for navbar
               }}
             >
               <Outlet />
@@ -214,5 +238,5 @@ Skills
         </main>
       </div>
     </div>
-  )
+  );
 }
