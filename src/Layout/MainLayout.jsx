@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, NavLink } from 'react-router' // make sure it's 'react-router-dom'
 import Sidebar from '../components/Sidebar'
+import resume from '../assets/resume.pdf' 
 
 export default function MainLayout() {
   return (
@@ -70,7 +71,7 @@ export default function MainLayout() {
                 }`
               }
             >
-              Resume
+             Skills
             </NavLink>
             <NavLink
               to="/projects"
@@ -92,14 +93,14 @@ export default function MainLayout() {
                 }`
               }
             >
-              Awards
+           Awards & Certificates
             </NavLink>
             <a
-              href="/cv.pdf"
-              download="My_CV.pdf"
+              href={resume}
+                download="mernstack-resume-ramjan.pdf"
               className="transition-colors duration-300 cursor-pointer hover:text-[#FF4E88] shadow-lg "
             >
-              Download CV
+              Download Resume
             </a>
           </nav>
 
@@ -156,8 +157,8 @@ export default function MainLayout() {
                   }`
                 }
               >
-                Resume
-              </NavLink>
+Skills            
+  </NavLink>
               <NavLink
                 to="/projects"
                 end
@@ -178,14 +179,25 @@ export default function MainLayout() {
                   }`
                 }
               >
-                Awards
+               Awards & Certificates
+              </NavLink>
+              <NavLink
+                to="/contact"
+                end
+                className={({ isActive }) =>
+                  `transition-colors duration-300 cursor-pointer ${
+                    isActive ? 'text-[#FF4E88] shadow-lg' : 'text-gray-100'
+                  }`
+                }
+              >
+               Contact
               </NavLink>
               <a
-                href="/cv.pdf"
-                download="My_CV.pdf"
+                href={resume}
+                download="mernstack-resume-ramjan.pdf"
                 className="transition-colors duration-300 cursor-pointer text-gray-100 hover:text-[#FF4E88] shadow-lg "
               >
-                Download CV
+                Download Resume
               </a>
             </nav>
 

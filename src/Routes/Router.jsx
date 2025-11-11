@@ -5,6 +5,7 @@ import AboutMe from '../pages/About'
 import Resume from '../pages/Resume'
 import Projects from '../pages/Projects'
 import Award from '../pages/Award'
+import ContactPage from '../pages/Contact'
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "/awards",
         element: <Award/>
+      },
+       {
+        path: "/contact",
+        element: <ContactPage/>
       }
 
     ]
