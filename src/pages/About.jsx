@@ -180,7 +180,7 @@ const AboutMe = () => {
             >
               I am{' '}
               <span className="font-semibold text-white">
-                Niloy Ahmad Ramjan
+               Md Ramjan Ali
               </span>
               , a passionate{' '}
               <span className="text-[#4BB8FF] font-semibold">
